@@ -1,0 +1,33 @@
+print("Markbook")
+print()
+i = 1
+names = []
+while True:
+ 
+    
+    choice = input("What would you like to do?: Edit, Remove, Add or Students: ")
+    
+    if choice == "Remove":
+        print(names)
+        ind = int(input("Which student would you like to remove? "))
+        del names[ind-1]
+        print(names)
+
+    if choice == "Edit":
+        print(names)
+        index = int(input("Which student would you like to edit?: "))
+        new_student = input("Enter Student Name: ")
+        names[index-1] = new_student
+        print(names)
+
+    if choice == "Add":
+        while i >= 1:
+            student = input("Enter Student Name: ")
+            if student != "Done":
+              names.append(student)
+            elif student == "Done":
+                break
+                print(names)
+    
+    if choice == "Students":
+        print(names)
